@@ -10,33 +10,35 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="KGk-i7-Jjw" customClass="TaskListTableViewCell" customModule="Taskty" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="55" id="KGk-i7-Jjw" customClass="TaskListTableViewCell" customModule="Taskty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbX-65-kF2">
-                        <rect key="frame" x="40" y="5" width="214" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="40" y="8" width="45.333333333333343" height="21"/>
+                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bq-Cr-s5W">
-                        <rect key="frame" x="40" y="26" width="31" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" systemColor="systemGray2Color"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bq-Cr-s5W">
+                        <rect key="frame" x="40" y="33" width="70" height="15"/>
+                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="12"/>
+                        <color key="textColor" white="0.33000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imb-Mb-21f">
-                        <rect key="frame" x="274" y="7" width="37" height="31"/>
+                        <rect key="frame" x="274" y="7" width="37" height="42"/>
                         <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system">
+                            <color key="baseForegroundColor" name="AppColor"/>
+                        </buttonConfiguration>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-t0-hNr">
-                        <rect key="frame" x="0.0" y="1" width="17" height="42"/>
+                        <rect key="frame" x="0.0" y="1" width="17" height="53"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="17" id="lVX-Ke-30w"/>
@@ -45,16 +47,15 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="MbX-65-kF2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="7Kb-ic-s2G"/>
-                    <constraint firstItem="imb-Mb-21f" firstAttribute="leading" secondItem="6bq-Cr-s5W" secondAttribute="trailing" constant="203" id="7wz-Hz-v5g"/>
-                    <constraint firstItem="imb-Mb-21f" firstAttribute="leading" secondItem="MbX-65-kF2" secondAttribute="trailing" constant="20" id="Jbb-2a-eka"/>
+                    <constraint firstAttribute="bottom" secondItem="6bq-Cr-s5W" secondAttribute="bottom" constant="7" id="Drn-1y-vcA"/>
                     <constraint firstAttribute="trailing" secondItem="imb-Mb-21f" secondAttribute="trailing" constant="9" id="KFj-4f-kMB"/>
-                    <constraint firstItem="MbX-65-kF2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="LF9-d4-bpW"/>
+                    <constraint firstItem="MbX-65-kF2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="LF9-d4-bpW"/>
                     <constraint firstAttribute="bottom" secondItem="imb-Mb-21f" secondAttribute="bottom" constant="6" id="Pnx-2f-qkt"/>
+                    <constraint firstItem="imb-Mb-21f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="274" id="iZ1-LY-6Y6"/>
                     <constraint firstItem="bLX-t0-hNr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="jbR-Fd-Zti"/>
                     <constraint firstItem="imb-Mb-21f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="kUf-MO-D1z"/>
-                    <constraint firstItem="6bq-Cr-s5W" firstAttribute="top" secondItem="MbX-65-kF2" secondAttribute="bottom" id="pHr-EF-QKQ"/>
+                    <constraint firstItem="6bq-Cr-s5W" firstAttribute="top" secondItem="MbX-65-kF2" secondAttribute="bottom" constant="4" id="pHr-EF-QKQ"/>
                     <constraint firstItem="bLX-t0-hNr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tlp-cj-uwa"/>
-                    <constraint firstAttribute="bottom" secondItem="6bq-Cr-s5W" secondAttribute="bottom" constant="3" id="wzu-iS-vzc"/>
                     <constraint firstAttribute="bottom" secondItem="bLX-t0-hNr" secondAttribute="bottom" constant="1" id="xhc-mj-WwP"/>
                     <constraint firstItem="6bq-Cr-s5W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="zoT-jn-lcA"/>
                 </constraints>
@@ -65,16 +66,16 @@
                 <outlet property="priorityColorImage" destination="bLX-t0-hNr" id="0kL-GW-Bik"/>
                 <outlet property="taskLabel" destination="MbX-65-kF2" id="zXi-MB-aG7"/>
             </connections>
-            <point key="canvasLocation" x="130.76923076923077" y="85.308056872037909"/>
+            <point key="canvasLocation" x="130.76923076923077" y="89.218009478672982"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <namedColor name="AppColor">
+            <color red="0.23596983952444744" green="0.84447324336464646" blue="0.6925336697749287" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

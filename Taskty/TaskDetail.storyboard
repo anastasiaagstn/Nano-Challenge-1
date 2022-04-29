@@ -36,18 +36,12 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFb-Cp-abO">
                                 <rect key="frame" x="325" y="112" width="51" height="31"/>
                                 <color key="onTintColor" systemColor="systemMintColor"/>
+                                <connections>
+                                    <action selector="enableDate:" destination="Y6W-OH-hqX" eventType="valueChanged" id="sEN-8I-RAt"/>
+                                </connections>
                             </switch>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-sL-xby">
-                                <rect key="frame" x="16" y="214" width="248" height="32"/>
-                                <segments>
-                                    <segment title="Low"/>
-                                    <segment title="Medium"/>
-                                    <segment title="High"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemMintColor"/>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgk-Pw-UaM">
-                                <rect key="frame" x="16" y="188" width="55" height="21"/>
+                                <rect key="frame" x="16" y="200" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,29 +51,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-sL-xby">
+                                <rect key="frame" x="126" y="195" width="248" height="32"/>
+                                <segments>
+                                    <segment title="Low"/>
+                                    <segment title="Medium"/>
+                                    <segment title="High"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemMintColor"/>
+                                <connections>
+                                    <action selector="scChangeColor:" destination="Y6W-OH-hqX" eventType="valueChanged" id="m20-NA-MMp"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5sa-o9-Smt" firstAttribute="top" secondItem="DgQ-62-xxG" secondAttribute="bottom" constant="13" id="20A-Tb-N2T"/>
+                            <constraint firstItem="SGI-sL-xby" firstAttribute="top" secondItem="Nqh-rh-5Ji" secondAttribute="bottom" constant="15" id="2Kc-ts-IUY"/>
                             <constraint firstItem="TFb-Cp-abO" firstAttribute="top" secondItem="DgQ-62-xxG" secondAttribute="bottom" constant="8" id="3By-4U-d9L"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xgk-Pw-UaM" secondAttribute="trailing" constant="319" id="AbH-aV-YAc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SGI-sL-xby" secondAttribute="trailing" constant="16" id="BLK-Ar-Peq"/>
                             <constraint firstItem="tdd-sK-OKL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="I0G-nM-t0d"/>
                             <constraint firstItem="xgk-Pw-UaM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="J1j-U0-t7r"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SGI-sL-xby" secondAttribute="trailing" constant="126" id="MFK-KA-1dH"/>
                             <constraint firstItem="Nqh-rh-5Ji" firstAttribute="top" secondItem="5sa-o9-Smt" secondAttribute="bottom" constant="8" id="R0I-li-X9g"/>
                             <constraint firstItem="5sa-o9-Smt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="S5V-3A-5UE"/>
                             <constraint firstItem="tdd-sK-OKL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UK2-fz-Qla"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Nqh-rh-5Ji" secondAttribute="trailing" constant="230" id="bew-5B-Dw9"/>
-                            <constraint firstItem="SGI-sL-xby" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="bjJ-fS-528"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DgQ-62-xxG" secondAttribute="trailing" constant="16" id="c0D-7e-E2M"/>
                             <constraint firstItem="DgQ-62-xxG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="e57-CL-rdQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tdd-sK-OKL" secondAttribute="trailing" constant="339" id="gJc-zY-OlI"/>
                             <constraint firstItem="DgQ-62-xxG" firstAttribute="top" secondItem="tdd-sK-OKL" secondAttribute="bottom" constant="5" id="gpE-4X-6ys"/>
+                            <constraint firstItem="SGI-sL-xby" firstAttribute="leading" secondItem="xgk-Pw-UaM" secondAttribute="trailing" constant="55" id="qik-Pi-Moy"/>
                             <constraint firstItem="TFb-Cp-abO" firstAttribute="leading" secondItem="5sa-o9-Smt" secondAttribute="trailing" constant="240" id="uVu-5w-8yo"/>
-                            <constraint firstItem="SGI-sL-xby" firstAttribute="top" secondItem="xgk-Pw-UaM" secondAttribute="bottom" constant="5" id="uWe-Zh-2gK"/>
                             <constraint firstItem="Nqh-rh-5Ji" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ux7-mP-Zmi"/>
-                            <constraint firstItem="xgk-Pw-UaM" firstAttribute="top" secondItem="Nqh-rh-5Ji" secondAttribute="bottom" constant="8" id="x9A-S9-wWk"/>
+                            <constraint firstItem="xgk-Pw-UaM" firstAttribute="top" secondItem="Nqh-rh-5Ji" secondAttribute="bottom" constant="20" id="x9A-S9-wWk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TFb-Cp-abO" secondAttribute="trailing" constant="16" id="xxR-6l-OtK"/>
                         </constraints>
                     </view>
@@ -93,6 +99,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="dateSwitch" destination="TFb-Cp-abO" id="Mci-vd-IA8"/>
                         <outlet property="dateTextField" destination="Nqh-rh-5Ji" id="UEU-0m-Hgh"/>
                         <outlet property="nameTextField" destination="DgQ-62-xxG" id="dca-TS-cfL"/>
                         <outlet property="taskPriorityControl" destination="SGI-sL-xby" id="sRh-Jg-ikX"/>

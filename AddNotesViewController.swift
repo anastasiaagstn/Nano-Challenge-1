@@ -31,6 +31,22 @@ class AddNotesViewController: UIViewController {
         dateTextField.inputView = datePicker
         dateTextField.text = formatDate(date: datePicker.date)
         
+        
+    }
+    
+    //segmented control functions
+    @IBAction func scChangeColor(_ sender: UISegmentedControl) {
+        let index = sender.selectedSegmentIndex
+        switch index{
+        case 0:
+            sender.selectedSegmentTintColor = UIColor.systemGreen
+        case 1:
+            sender.selectedSegmentTintColor = UIColor.systemYellow
+        case 2:
+            sender.selectedSegmentTintColor = UIColor.systemRed
+        default:
+            sender.selectedSegmentTintColor = UIColor.systemMint
+        }
     }
     
     //datepicker functions
@@ -42,6 +58,17 @@ class AddNotesViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM yyyy"
         return formatter.string(from: date)
+    }
+    
+    //switch function
+    @IBAction func enableDate(_ sender: UISwitch) {
+        if sender.isOn {
+            dateTextField.isEnabled = true
+        } else {
+            dateTextField.isEnabled = false
+            dateTextField.text = ""
+        }
+        
     }
     
     

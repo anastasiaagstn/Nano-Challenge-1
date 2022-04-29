@@ -17,67 +17,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awZ-Fs-sdm">
-                                <rect key="frame" x="16" y="44" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="44" width="44" height="20"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4f-kK-Gab">
-                                <rect key="frame" x="16" y="188" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="198" width="69" height="20"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2n-qU-qRo">
-                                <rect key="frame" x="16" y="70" width="358" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="16" y="69" width="358" height="34"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tqk-WQ-prN">
-                                <rect key="frame" x="16" y="146" width="144" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="16" y="144" width="144" height="34"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbP-sq-jVR">
-                                <rect key="frame" x="16" y="117" width="134" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="116" width="134" height="20"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Gl-ws-aTH">
+                                <rect key="frame" x="325" y="111" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemMintColor"/>
+                                <connections>
+                                    <action selector="enableDate:" destination="aRM-x7-YxE" eventType="valueChanged" id="NJO-Ji-nvy"/>
+                                </connections>
+                            </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6NP-mL-cVm">
-                                <rect key="frame" x="16" y="214" width="248" height="32"/>
+                                <rect key="frame" x="126" y="193" width="248" height="32"/>
                                 <segments>
                                     <segment title="Low"/>
                                     <segment title="Medium"/>
                                     <segment title="High"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="systemMintColor"/>
+                                <connections>
+                                    <action selector="scChangeColor:" destination="aRM-x7-YxE" eventType="valueChanged" id="f8s-Ax-wDr"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cha-ee-2q8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6NP-mL-cVm" firstAttribute="top" secondItem="M4f-kK-Gab" secondAttribute="bottom" constant="5" id="0Qd-or-vEr"/>
                             <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="Tqk-WQ-prN" secondAttribute="trailing" constant="230" id="1E2-NT-Vct"/>
-                            <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="M4f-kK-Gab" secondAttribute="trailing" constant="319" id="4Bo-du-aKk"/>
                             <constraint firstItem="Tqk-WQ-prN" firstAttribute="leading" secondItem="Cha-ee-2q8" secondAttribute="leading" constant="16" id="4pv-kj-N1K"/>
-                            <constraint firstItem="6NP-mL-cVm" firstAttribute="leading" secondItem="Cha-ee-2q8" secondAttribute="leading" constant="16" id="BRz-V3-ndV"/>
+                            <constraint firstItem="4Gl-ws-aTH" firstAttribute="top" secondItem="K2n-qU-qRo" secondAttribute="bottom" constant="8" id="754-R7-Zop"/>
+                            <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="M4f-kK-Gab" secondAttribute="trailing" constant="305" id="D65-yO-mOt"/>
+                            <constraint firstItem="6NP-mL-cVm" firstAttribute="top" secondItem="Tqk-WQ-prN" secondAttribute="bottom" constant="15" id="JMA-Pi-xgz"/>
                             <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="awZ-Fs-sdm" secondAttribute="trailing" constant="330" id="Lt1-TS-ixg"/>
+                            <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="4Gl-ws-aTH" secondAttribute="trailing" constant="16" id="NQx-D7-wrr"/>
                             <constraint firstItem="Tqk-WQ-prN" firstAttribute="top" secondItem="VbP-sq-jVR" secondAttribute="bottom" constant="8" id="SgA-YU-EO9"/>
                             <constraint firstItem="VbP-sq-jVR" firstAttribute="top" secondItem="K2n-qU-qRo" secondAttribute="bottom" constant="13" id="Uiu-JT-kqc"/>
-                            <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="6NP-mL-cVm" secondAttribute="trailing" constant="126" id="VYf-KD-PK7"/>
+                            <constraint firstItem="4Gl-ws-aTH" firstAttribute="leading" secondItem="Cha-ee-2q8" secondAttribute="leading" constant="325" id="Zfv-VG-CjT"/>
                             <constraint firstItem="K2n-qU-qRo" firstAttribute="leading" secondItem="Cha-ee-2q8" secondAttribute="leading" constant="16" id="cYl-QF-bHL"/>
                             <constraint firstItem="M4f-kK-Gab" firstAttribute="leading" secondItem="Cha-ee-2q8" secondAttribute="leading" constant="16" id="f64-ah-fVq"/>
                             <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="K2n-qU-qRo" secondAttribute="trailing" constant="16" id="hhf-vV-NyX"/>
-                            <constraint firstItem="M4f-kK-Gab" firstAttribute="top" secondItem="Tqk-WQ-prN" secondAttribute="bottom" constant="8" id="j3P-Am-sZT"/>
+                            <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="6NP-mL-cVm" secondAttribute="trailing" constant="16" id="irZ-49-n5q"/>
+                            <constraint firstItem="M4f-kK-Gab" firstAttribute="top" secondItem="Tqk-WQ-prN" secondAttribute="bottom" constant="20" id="j3P-Am-sZT"/>
                             <constraint firstItem="VbP-sq-jVR" firstAttribute="leading" secondItem="Cha-ee-2q8" secondAttribute="leading" constant="16" id="oG8-bz-Tle"/>
                             <constraint firstItem="Cha-ee-2q8" firstAttribute="trailing" secondItem="VbP-sq-jVR" secondAttribute="trailing" constant="240" id="pXW-hn-bm3"/>
                             <constraint firstItem="awZ-Fs-sdm" firstAttribute="top" secondItem="Cha-ee-2q8" secondAttribute="top" id="utB-Zh-sIJ"/>
                             <constraint firstItem="K2n-qU-qRo" firstAttribute="top" secondItem="awZ-Fs-sdm" secondAttribute="bottom" constant="5" id="v1t-ye-rJv"/>
                             <constraint firstItem="awZ-Fs-sdm" firstAttribute="leading" secondItem="Cha-ee-2q8" secondAttribute="leading" constant="16" id="vCz-81-Fsn"/>
+                            <constraint firstItem="6NP-mL-cVm" firstAttribute="leading" secondItem="M4f-kK-Gab" secondAttribute="trailing" constant="41" id="zcC-hy-S26"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="6lm-vP-EJJ">
+                    <navigationItem key="navigationItem" title="Add Task" largeTitleDisplayMode="never" id="6lm-vP-EJJ">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="bta-hg-GvV">
                             <connections>
                                 <action selector="triggerSegueToTL:" destination="aRM-x7-YxE" id="R8z-RF-xWX"/>
@@ -94,7 +107,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHr-oe-ZdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0lT-8N-Rni" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1842" y="-2"/>
+            <point key="canvasLocation" x="1841.5384615384614" y="-2.1327014218009479"/>
         </scene>
     </scenes>
     <resources>

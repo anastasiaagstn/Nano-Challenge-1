@@ -17,6 +17,7 @@ class TaskDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var taskPriorityControl: UISegmentedControl!
+    @IBOutlet weak var dateSwitch: UISwitch!
     
     //declare data
     var taskData: TaskItem?
@@ -39,9 +40,10 @@ class TaskDetailViewController: UIViewController {
 
         //connect the fields with the task datas
         nameTextField.text = taskData?.name
-        if let taskDate = taskData?.date{
+        if let taskDate = taskData?.date, taskDate != ""{
             dateTextField?.text = taskDate
-        } else {
+        } else if let taskDate = taskData?.date, taskDate == ""{
+            dateSwitch.isOn = false
             dateTextField?.text = ""
         }
         if let taskPriority = taskData?.priority{
@@ -51,6 +53,34 @@ class TaskDetailViewController: UIViewController {
         }
     }
     
+    //priority segmented control function
+    @IBAction func scChangeColor(_ sender: UISegmentedControl) {
+        let index = sender.selectedSegmentIndex
+        switch index{
+        case 0:
+            sender.selectedSegmentTintColor = UIColor.systemGreen
+        case 1:
+            sender.selectedSegmentTintColor = UIColor.systemYellow
+        case 2:
+            sender.selectedSegmentTintColor = UIColor.systemRed
+        default:
+            sender.selectedSegmentTintColor = UIColor.systemMint
+        }
+    }
+    
+    
+    
+    
+    //switch function
+    @IBAction func enableDate(_ sender: UISwitch) {
+        if sender.isOn {
+            dateTextField.isEnabled = true
+        } else {
+            dateTextField.isEnabled = false
+            dateTextField.text = ""
+        }
+        
+    }
     
     //datepicker functions
     @objc func dateChange(datePicker: UIDatePicker){
