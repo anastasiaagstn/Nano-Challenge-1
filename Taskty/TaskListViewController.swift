@@ -25,7 +25,6 @@ class TaskListViewController: UIViewController {
         taskTableView.register(UINib(nibName: "TaskListTableViewCell", bundle: nil), forCellReuseIdentifier: "taskCell")
         taskTableView.delegate = self
         taskTableView.dataSource = self
-        
     }
     
     @IBAction func segueToAddNotes(_ sender: UIBarButtonItem) {
@@ -58,6 +57,11 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = taskTableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskListTableViewCell
         cell?.taskLabel.text = lists?[indexPath.row].name
         cell?.dateLabel.text = lists?[indexPath.row].date
+        let colors: [UIColor] = [UIColor.systemGreen, UIColor.systemYellow, UIColor.systemRed]
+        if let priorityIndex = lists?[indexPath.row].priority{
+            cell?.priorityColorImage.backgroundColor = colors[priorityIndex]
+        }
+        
         return cell ?? UITableViewCell()
     }
     
@@ -73,6 +77,20 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "moveToDetail", sender: self)
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            tableView.beginUpdates()
+            lists?.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            tableView.endUpdates()
+        }
+    }
+    
 }
 
 extension TaskListViewController: TaskDetailDelegate {

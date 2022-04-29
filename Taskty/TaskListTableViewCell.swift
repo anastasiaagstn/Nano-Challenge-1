@@ -11,6 +11,7 @@ class TaskListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var priorityColorImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
