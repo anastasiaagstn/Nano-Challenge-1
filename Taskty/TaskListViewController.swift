@@ -18,7 +18,7 @@ class TaskListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //input the data model
         lists = taskFeed.feeder()
         
         //declare table cells
@@ -34,8 +34,6 @@ class TaskListViewController: UIViewController {
     @IBAction func unwindToTaskList( _ seg: UIStoryboardSegue) {
         taskTableView.reloadData()
     }
-    
-    
 }
 
 
@@ -61,7 +59,6 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource{
         if let priorityIndex = lists?[indexPath.row].priority{
             cell?.priorityColorImage.backgroundColor = colors[priorityIndex]
         }
-        
         return cell ?? UITableViewCell()
     }
     
@@ -92,8 +89,8 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource{
             tableView.endUpdates()
         }
     }
-    
 }
+
 
 extension TaskListViewController: TaskDetailDelegate {
     func getSavedTask(_ newName: String, _ newPriority: Int, _ index: Int, _ date: String) {
@@ -101,6 +98,5 @@ extension TaskListViewController: TaskDetailDelegate {
         lists?[index].priority = newPriority
         lists?[index].date = date
         self.taskTableView.reloadData()
-        
     }
 }

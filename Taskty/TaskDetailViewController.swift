@@ -25,7 +25,6 @@ class TaskDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print("opened task with index: \(dataIndex!)")
         
         //create datepicker
@@ -68,9 +67,6 @@ class TaskDetailViewController: UIViewController {
         }
     }
     
-    
-    
-    
     //switch function
     @IBAction func enableDate(_ sender: UISwitch) {
         if sender.isOn {
@@ -79,7 +75,6 @@ class TaskDetailViewController: UIViewController {
             dateTextField.isEnabled = false
             dateTextField.text = ""
         }
-        
     }
     
     //datepicker functions

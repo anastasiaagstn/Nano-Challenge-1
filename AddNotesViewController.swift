@@ -68,7 +68,6 @@ class AddNotesViewController: UIViewController {
             dateTextField.isEnabled = false
             dateTextField.text = ""
         }
-        
     }
     
     

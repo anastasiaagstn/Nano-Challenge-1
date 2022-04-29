@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <color key="textColor" name="AppColor"/>
+                            <color key="textColor" name="AccentColor"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="36"/>
-                            <color key="textColor" name="AppColor"/>
+                            <color key="textColor" name="AccentColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -67,8 +67,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AppColor">
-            <color red="0.19438718259334564" green="0.77731090784072876" blue="0.6935417652130127" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="AccentColor">
+            <color red="0.16300000250339508" green="0.53899997472763062" blue="0.57899999618530273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

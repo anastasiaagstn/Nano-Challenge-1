@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,6 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="TaskList" id="xRU-wA-t5d">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="ATX-YF-OkE">
+                            <color key="tintColor" name="AppColor"/>
                             <connections>
                                 <action selector="segueToAddNotes:" destination="BYZ-38-t0r" id="7lO-oh-Duz"/>
                                 <segue destination="W1P-At-A5G" kind="show" id="0Kb-1v-MJQ"/>
@@ -70,6 +72,9 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AppColor">
+            <color red="0.1940000057220459" green="0.77700001001358032" blue="0.6940000057220459" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
