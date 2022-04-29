@@ -77,7 +77,10 @@ class AddNotesViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let newVC = segue.destination as? TaskListViewController {
-            guard let addedName = nameTextField.text else {return}
+            guard let addedName = nameTextField.text, addedName != ""
+            else {
+                fatalError("Task is Empty")
+            }
             let newTask = TaskItem(name: addedName, date: dateTextField.text, priority: prioritySC.selectedSegmentIndex, notes: "")
             newVC.lists?.append(newTask)
         }
