@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Task Detail-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="taskDetail" id="Y6W-OH-hqX" customClass="TaskDetailViewController" customModule="Taskty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdd-sK-OKL">
+                                <rect key="frame" x="16" y="44" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-o9-Smt">
+                                <rect key="frame" x="16" y="117" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-62-xxG">
+                                <rect key="frame" x="16" y="70" width="358" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TFb-Cp-abO">
+                                <rect key="frame" x="325" y="112" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemMintColor"/>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-sL-xby">
+                                <rect key="frame" x="16" y="214" width="248" height="32"/>
+                                <segments>
+                                    <segment title="Low"/>
+                                    <segment title="Medium"/>
+                                    <segment title="High"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemMintColor"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgk-Pw-UaM">
+                                <rect key="frame" x="16" y="188" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nqh-rh-5Ji">
+                                <rect key="frame" x="16" y="146" width="144" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5sa-o9-Smt" firstAttribute="top" secondItem="DgQ-62-xxG" secondAttribute="bottom" constant="13" id="20A-Tb-N2T"/>
+                            <constraint firstItem="TFb-Cp-abO" firstAttribute="top" secondItem="DgQ-62-xxG" secondAttribute="bottom" constant="8" id="3By-4U-d9L"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xgk-Pw-UaM" secondAttribute="trailing" constant="319" id="AbH-aV-YAc"/>
+                            <constraint firstItem="tdd-sK-OKL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="I0G-nM-t0d"/>
+                            <constraint firstItem="xgk-Pw-UaM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="J1j-U0-t7r"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SGI-sL-xby" secondAttribute="trailing" constant="126" id="MFK-KA-1dH"/>
+                            <constraint firstItem="Nqh-rh-5Ji" firstAttribute="top" secondItem="5sa-o9-Smt" secondAttribute="bottom" constant="8" id="R0I-li-X9g"/>
+                            <constraint firstItem="5sa-o9-Smt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="S5V-3A-5UE"/>
+                            <constraint firstItem="tdd-sK-OKL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UK2-fz-Qla"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Nqh-rh-5Ji" secondAttribute="trailing" constant="230" id="bew-5B-Dw9"/>
+                            <constraint firstItem="SGI-sL-xby" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="bjJ-fS-528"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DgQ-62-xxG" secondAttribute="trailing" constant="16" id="c0D-7e-E2M"/>
+                            <constraint firstItem="DgQ-62-xxG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="e57-CL-rdQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tdd-sK-OKL" secondAttribute="trailing" constant="339" id="gJc-zY-OlI"/>
+                            <constraint firstItem="DgQ-62-xxG" firstAttribute="top" secondItem="tdd-sK-OKL" secondAttribute="bottom" constant="5" id="gpE-4X-6ys"/>
+                            <constraint firstItem="TFb-Cp-abO" firstAttribute="leading" secondItem="5sa-o9-Smt" secondAttribute="trailing" constant="240" id="uVu-5w-8yo"/>
+                            <constraint firstItem="SGI-sL-xby" firstAttribute="top" secondItem="xgk-Pw-UaM" secondAttribute="bottom" constant="5" id="uWe-Zh-2gK"/>
+                            <constraint firstItem="Nqh-rh-5Ji" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ux7-mP-Zmi"/>
+                            <constraint firstItem="xgk-Pw-UaM" firstAttribute="top" secondItem="Nqh-rh-5Ji" secondAttribute="bottom" constant="8" id="x9A-S9-wWk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TFb-Cp-abO" secondAttribute="trailing" constant="16" id="xxR-6l-OtK"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Task Detail" largeTitleDisplayMode="never" id="Xrz-Bg-Vkb">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="BKP-I9-BxR">
+                            <connections>
+                                <action selector="saveTask:" destination="Y6W-OH-hqX" id="RFr-Ae-Fae"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="Nqh-rh-5Ji" id="UEU-0m-Hgh"/>
+                        <outlet property="nameTextField" destination="DgQ-62-xxG" id="dca-TS-cfL"/>
+                        <outlet property="taskPriorityControl" destination="SGI-sL-xby" id="sRh-Jg-ikX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510.76923076923077" y="32.701421800947863"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
